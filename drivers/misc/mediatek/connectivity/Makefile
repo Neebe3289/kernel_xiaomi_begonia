@@ -64,10 +64,8 @@ endif
 
     endif
 
-    # Do build-in for rest of connectivity drivers
-    obj-y += bt/mt66xx/legacy/
-    obj-y += fmradio/
-    obj-y += gps/
+# Bluetooth
+obj-$(CONFIG_MTK_COMBO_BT) += bt/mt66xx/legacy/
 
 # Otherwise we were called directly from the command line;
 # invoke the kernel build system.
